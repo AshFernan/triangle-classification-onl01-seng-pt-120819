@@ -9,9 +9,9 @@ class Triangle
   
   def kind
   types_of_triangles
-    if equilateral == isosceles && isosceles == scalene
+    if eq == is && is == sc
     :equilateral
-    elsif equilateral == isosceles || isosceles == scalene || equilateral == scalene
+    elsif eq == is || is == sc || eq == sc
     :isosceles
     else
     :scalene
@@ -19,8 +19,8 @@ class Triangle
 end
 
  def types_of_triangles
-   true_triangles = [(equilateral+ isosceles > scalene), (equilateral +scalene > isosceles), (isosceles+ scalene > equilateral)]
-   [equilateral, isosceles, scalene].each do |side|
+   true_triangles = [(eq + is > sc), (eq + sc > is), (is + sc > eq)]
+   [eq, isosceles, scalene].each do |side|
      true_triangles<< false if side <=0
      raise TriangleError if true_triangles.include?(false)
    end
