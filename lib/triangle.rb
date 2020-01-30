@@ -2,8 +2,8 @@ class Triangle
   attr_accessor :eq, :is, :sc
   
   def initialize ( eq, is, sc)
-    @eq = eq
-    @is = is
+    @eq= eq
+    @is= is
     @sc= sc
   end
   
