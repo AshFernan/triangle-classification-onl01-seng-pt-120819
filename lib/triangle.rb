@@ -20,7 +20,7 @@ end
 
  def types_of_triangles
    true_triangles = [(eq + is > sc), (eq + sc > is), (is + sc > eq)]
-   [eq, isosceles, scalene].each do |side|
+   [eq, is, sc].each do |side|
      true_triangles<< false if side <=0
      raise TriangleError if true_triangles.include?(false)
    end
